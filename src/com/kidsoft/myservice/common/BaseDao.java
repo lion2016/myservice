@@ -9,7 +9,9 @@ public class BaseDao extends HibernateDaoSupport{
 	
 	@Resource(name="sessionFactory")
 	public void setSuperSessionFactory(SessionFactory sessionFactory) {
+		
 		super.setSessionFactory(sessionFactory);
+		
 	}
 	
 }
