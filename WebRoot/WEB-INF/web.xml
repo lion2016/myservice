@@ -5,6 +5,15 @@
 	id="WebApp_ID" version="2.5">
 	<display-name>Apache-Axis2</display-name>
 
+	<context-param>
+		<param-name>contextConfigLocation</param-name>
+		<param-value>classpath*:applicationContext*.xml</param-value>
+	</context-param>
+
+	<listener>
+		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+	</listener>
+
 	<servlet>
 		<servlet-name>AxisServlet</servlet-name>
 		<servlet-class>org.apache.axis2.transport.http.AxisServlet</servlet-class>
@@ -14,7 +23,7 @@
 		<servlet-name>AxisServlet</servlet-name>
 		<url-pattern>/services/*</url-pattern>
 	</servlet-mapping>
-	
+
 	<welcome-file-list>
 		<welcome-file>index.jsp</welcome-file>
 		<welcome-file>index.html</welcome-file>
